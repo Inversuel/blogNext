@@ -22,14 +22,6 @@ export const allArticleQuery = gql`
       }
       id
       description {
-        blocks {
-          id
-          image {
-            id
-            url
-            alt
-          }
-        }
         value
         links
       }

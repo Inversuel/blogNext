@@ -39,14 +39,8 @@ export interface ImageMain {
 }
 
 export interface Description {
-  blocks: Block[]
   value: Value
   links: any[]
-}
-
-export interface Block {
-  id: string
-  image: Image
 }
 
 export interface Image {

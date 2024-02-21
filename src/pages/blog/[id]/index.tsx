@@ -29,11 +29,19 @@ const BlogPost = ({ post }: BlogPost) => {
         width={1216}
         height={650}
       />
-      <StructuredText data={post?.description} />
+      <StructuredText
+        data={post?.description}
+        renderBlock={({ record }) => {
+          console.log("record.__typename", record.__typename);
+          return <div></div>;
+        }}
+      />
       <hr />
       <div className="flex flex-row gap-4 items-center self-start">
         <AuthorImage src={post?.author.photo.url ?? ""} />
-        <Typography variant="mutedText" className="text-xs" >{post?.author.name}</Typography>
+        <Typography variant="mutedText" className="text-xs">
+          {post?.author.name}
+        </Typography>
       </div>
     </Container>
   );
