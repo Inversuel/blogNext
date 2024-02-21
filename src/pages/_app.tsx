@@ -13,7 +13,6 @@ export default function App({ Component, pageProps }: AppProps) {
     >
       <GoogleAnalytics gaId="G-SWFXX4XCLL" />
       <GoogleTagManager gtmId="GT-WB7XNP9X" />
-
       <Nav />
       <Component {...pageProps} />
     </main>

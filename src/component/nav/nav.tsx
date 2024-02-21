@@ -5,11 +5,11 @@ import { Button } from "../ui/button";
 
 const Nav = () => {
   return (
-    <nav className="flex flex-row justify-between container h-20 items-center">
-      <Typography as="span">
-        Logo blog
-      </Typography>
-      <div className="flex flex-row gap-4 items-center align-middle">
+    <nav className="flex flex-row justify-between container px-4 md:px-8 lg:px-12 xl:px-24 h-20 items-center">
+      <Link href="/">
+        <Typography as="span">Logo blog</Typography>
+      </Link>
+      <div className="md:flex flex-row gap-4 items-center align-middle hidden">
         <Link href="/">
           <Typography>Home</Typography>
         </Link>
@@ -23,6 +23,9 @@ const Nav = () => {
           <Typography>Products</Typography>
         </Link>
       </div>
+      <Link href="/blog" className="block md:hidden">
+        <Typography>Blog</Typography>
+      </Link>
       <div className="inline-block">
         <Button variant="link">Log in</Button>
         <Button variant="default">Sign up</Button>

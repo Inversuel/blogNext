@@ -15,7 +15,7 @@ export default function Home() {
           content="Blog created with Dato cms and Nextjs"
         ></meta>
       </Head>
-      <section className="flex flex-row justify-between">
+      <section className="flex xl:flex-row flex-col xl:gap-0 gap-10 justify-between">
         <div className="flex flex-col gap-5 max-w-xl items-start justify-center">
           <div>
             <Typography variant="h1" className="whitespace-nowrap">

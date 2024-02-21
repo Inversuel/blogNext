@@ -10,6 +10,7 @@ import Image from "next/image";
 import dayjs from "dayjs";
 import AuthorImage from "@/component/author_img";
 import { StructuredText } from "react-datocms";
+import Head from "next/head";
 
 type BlogPost = {
   post: Article | null;
@@ -18,6 +19,13 @@ type BlogPost = {
 const BlogPost = ({ post }: BlogPost) => {
   return (
     <Container className="flex flex-col items-start gap-5 max-w-3xl">
+      <Head>
+        <title>Blog Nextjs</title>
+        <meta
+          name="description"
+          content="Blog created with Dato cms and Nextjs"
+        ></meta>
+      </Head>
       <Typography variant="smallText" className="text-primary">
         Published {dayjs(post?._publishedAt).format("DD MM YYYY")}
       </Typography>
